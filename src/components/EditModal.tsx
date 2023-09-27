@@ -11,6 +11,8 @@ import {
   useMantineTheme,
 } from "@mantine/core";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { changeState } from "../redux/dataSlice";
 
 interface ProductModalProps {
   status: string;
@@ -29,13 +31,25 @@ export default function EditModal({
   opened,
   price,
   quantity,
+  id,
   close,
   reason,
 }: ProductModalProps) {
   const theme = useMantineTheme();
+  const dispatch = useDispatch();
   const [newPrice, setNewPrice] = useState(price);
   const [newQuantity, setNewQuantity] = useState(quantity);
   const [newReason, setNewReason] = useState(reason);
+
+  const newStates = {
+    newPrice,
+    newQuantity,
+    newReason,
+  };
+
+  function handleSendClick() {
+    dispatch(changeState({ id, newStates }));
+  }
 
   return (
     <Modal opened={opened} onClose={close}>
@@ -88,7 +102,11 @@ export default function EditModal({
           <Button radius="xl" color={theme.colors.green[9]} variant="outline">
             Cancel
           </Button>
-          <Button color={theme.colors.green[9]} radius="xl">
+          <Button
+            color={theme.colors.green[9]}
+            radius="xl"
+            onClick={handleSendClick}
+          >
             Send
           </Button>
         </Group>

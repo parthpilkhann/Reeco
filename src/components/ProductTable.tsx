@@ -6,7 +6,7 @@ import { RootState } from "../redux/store";
 export function ProductTable() {
   const productData = useSelector((state: RootState) => state.data.items);
 
-  const rows = productData.map((row) => (
+  const rows = productData?.map((row) => (
     <Table.Tr key={row.id}>
       <Table.Td>
         <Group wrap="nowrap">
