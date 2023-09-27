@@ -11,9 +11,8 @@ import {
 import { IconCheck, IconSquareRoundedLetterX } from "@tabler/icons-react";
 import { useDisclosure } from "@mantine/hooks";
 import { getStatusJsx } from "./utils";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { changeStatus } from "../redux/dataSlice";
-import { RootState } from "../redux/store";
 
 export default function StatusComp({
   status,
@@ -27,10 +26,26 @@ export default function StatusComp({
   const [opened, { open, close }] = useDisclosure(false);
   const theme = useMantineTheme();
   const dispatch = useDispatch();
-  const productData = useSelector((state: RootState) => state.data.items);
 
   function handleCheckClick() {
-    dispatch(changeStatus({ id, newStatus: "approved" }));
+    if (status !== "approved") {
+      dispatch(changeStatus({ id, newStatus: "approved" }));
+    }
+    close();
+  }
+
+  function handleNoClick() {
+    if (status !== "missing") {
+      dispatch(changeStatus({ id, newStatus: "missing" }));
+    }
+    close();
+  }
+
+  function handleYesClick() {
+    if (status !== "urgentlyMissing") {
+      dispatch(changeStatus({ id, newStatus: "urgentlyMissing" }));
+    }
+    close();
   }
 
   return (
@@ -52,10 +67,20 @@ export default function StatusComp({
           <Title order={4}>Missing Product?</Title>
           <Text>is {name} product really missing?</Text>
           <Group>
-            <Button radius="xl" color={theme.colors.green[9]} variant="outline">
+            <Button
+              onClick={handleYesClick}
+              radius="xl"
+              color={theme.colors.green[9]}
+              variant="outline"
+            >
               Yes
             </Button>
-            <Button radius="xl" color={theme.colors.green[9]} variant="outline">
+            <Button
+              onClick={handleNoClick}
+              radius="xl"
+              color={theme.colors.green[9]}
+              variant="outline"
+            >
               No
             </Button>
           </Group>
