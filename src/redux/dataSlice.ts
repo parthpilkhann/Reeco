@@ -16,7 +16,7 @@ const dataSlice = createSlice({
     setData: (state, action: PayloadAction<ProductDataItem[]>) => {
       state.items = action.payload;
     },
-    // TODO: merge both reducers and make it one
+    // TODO: merge both reducers and make it one, the 'chageStatus' reducer can be omitted and changeState can be used intead.
     changeStatus: (
       state,
       action: PayloadAction<{ id: string; newStatus: string }>
