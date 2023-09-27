@@ -12,18 +12,15 @@ export interface ProductDataItem {
 }
 
 export function getStatusJsx(status: string) {
-  let badge;
-  if (status === "missing") {
-    badge = <Badge color="red">Missing</Badge>;
-  } else if (status === "urgentlyMissing") {
-    badge = <Badge color="rgba(189, 25, 25, 1)">Urgently Missing</Badge>;
-  } else if (status === "approved") {
-    badge = <Badge color="green">Approved</Badge>;
-  } else {
-    badge = <Badge color="green">Approved</Badge>;
-  }
+  let color;
+  if (status === "approved") color = "green";
+  else if (status === "missing") color = "red";
+  else if (status === "urgentlyMissing") color = "rgb(122, 7, 7)";
+  else color = "rgb(161, 10, 10)";
+  const badge = <Badge color={color}>{status}</Badge>;
   return badge;
 }
+
 export const data: ProductDataItem[] = [
   {
     id: "1",

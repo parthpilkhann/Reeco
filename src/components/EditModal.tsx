@@ -12,7 +12,7 @@ import {
 } from "@mantine/core";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { changeState } from "../redux/dataSlice";
+import { changeState, changeStatus } from "../redux/dataSlice";
 
 interface ProductModalProps {
   status: string;
@@ -49,6 +49,7 @@ export default function EditModal({
 
   function handleSendClick() {
     dispatch(changeState({ id, newStates }));
+    dispatch(changeStatus({ id, newStatus: "changed product" }));
     close();
   }
   return (
