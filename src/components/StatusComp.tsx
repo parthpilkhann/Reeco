@@ -5,6 +5,7 @@ import { getStatusJsx } from "./utils";
 import { useDispatch } from "react-redux";
 import { changeStatus } from "../redux/dataSlice";
 import ProductModal from "./ProductModal";
+import EditModal from "./EditModal";
 
 export default function StatusComp({
   status,
@@ -36,11 +37,24 @@ export default function StatusComp({
         <ActionIcon variant="transparent" onClick={open}>
           <IconSquareRoundedLetterX />
         </ActionIcon>
-        <Button radius="xl" color={theme.colors.green[9]} variant="filled">
+        <Button
+          radius="xl"
+          color={theme.colors.green[9]}
+          variant="filled"
+          onClick={open}
+        >
           Edit
         </Button>
       </Group>
       <ProductModal
+        status={status}
+        name={name}
+        id={id}
+        open={open}
+        opened={opened}
+        close={close}
+      />
+      <EditModal
         status={status}
         name={name}
         id={id}
