@@ -8,7 +8,7 @@ import {
 } from "@mantine/core";
 import { useHeadroom } from "@mantine/hooks";
 import { IconShoppingCart } from "@tabler/icons-react";
-import Header from "./Header";
+import Header from "./OrderCard";
 
 export default function Navbar() {
   const pinned = useHeadroom({ fixedAt: 120 });
