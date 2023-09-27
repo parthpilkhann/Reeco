@@ -5,12 +5,13 @@ export function ProductTable() {
   function getStatusJsx(status: string) {
     let badge;
     if (status === "missing") {
-      badge = <Badge color="red">{status}</Badge>;
+      badge = <Badge color="red">Missing</Badge>;
     } else if (status === "urgentlyMissing") {
-      badge = <Badge color="rgba(189, 25, 25, 1)">{status}</Badge>;
-    }
-    if (status === "approved") {
-      badge = <Badge color="green">{status}</Badge>;
+      badge = <Badge color="rgba(189, 25, 25, 1)">Urgently Missing</Badge>;
+    } else if (status === "approved") {
+      badge = <Badge color="green">Approved</Badge>;
+    } else {
+      badge = <Badge color="green">Approved</Badge>;
     }
     return badge;
   }
