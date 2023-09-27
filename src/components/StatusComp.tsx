@@ -46,7 +46,9 @@ export default function StatusComp({
         <ActionIcon variant="transparent" onClick={open}>
           <IconSquareRoundedLetterX />
         </ActionIcon>
-        <Button>Edit</Button>
+        <Button radius="xl" color={theme.colors.green[9]} variant="filled">
+          Edit
+        </Button>
       </Group>
       <Modal opened={opened} onClose={close}>
         <Stack>
