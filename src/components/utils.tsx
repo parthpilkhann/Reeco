@@ -6,7 +6,7 @@ export interface ProductDataItem {
   brand: string;
   price: number;
   quantity: number;
-  reason: "quantity";
+  reason: string;
   total: number;
   status: string;
 }
