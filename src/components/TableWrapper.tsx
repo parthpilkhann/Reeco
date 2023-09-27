@@ -9,6 +9,7 @@ import {
   useMantineTheme,
 } from "@mantine/core";
 import { IconSearch, IconArrowRight, IconPrinter } from "@tabler/icons-react";
+import { ProductTable } from "./ProductTable";
 
 export default function TableWrapper() {
   const theme = useMantineTheme();
@@ -49,6 +50,7 @@ export default function TableWrapper() {
             <IconPrinter />
           </Group>
         </Group>
+        <ProductTable />
       </Stack>
     </Paper>
   );
