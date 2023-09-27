@@ -12,10 +12,9 @@ import { IconSearch, IconArrowRight, IconPrinter } from "@tabler/icons-react";
 import { ProductTable } from "./ProductTable";
 import { useEffect, useState } from "react";
 import { data } from "./utils";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setData } from "../redux/dataSlice";
 import type { ProductDataItem } from "./utils";
-import { RootState } from "../redux/store";
 
 export default function TableWrapper() {
   const theme = useMantineTheme();
@@ -27,6 +26,10 @@ export default function TableWrapper() {
     setResData(data);
     dispatch(setData(resData));
   }, [dispatch, resData]);
+
+  function handleAddItem() {
+    //TODO: add logic for adding product, (add reducer)
+  }
 
   return (
     <Paper shadow="md" p="md">
@@ -58,7 +61,12 @@ export default function TableWrapper() {
             }
           />
           <Group justify="center">
-            <Button radius="xl" color={theme.colors.green[9]} variant="outline">
+            <Button
+              radius="xl"
+              color={theme.colors.green[9]}
+              variant="outline"
+              onClick={handleAddItem}
+            >
               Add Item
             </Button>
             <IconPrinter />
