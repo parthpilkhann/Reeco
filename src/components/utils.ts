@@ -1,5 +1,6 @@
 export const data = [
   {
+    id: "1",
     name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
@@ -8,6 +9,7 @@ export const data = [
     status: "approved",
   },
   {
+    id: "2",
     name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
@@ -16,6 +18,7 @@ export const data = [
     status: "missing",
   },
   {
+    id: "3",
     name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
@@ -24,6 +27,7 @@ export const data = [
     status: "approved",
   },
   {
+    id: "4",
     name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
@@ -32,6 +36,7 @@ export const data = [
     status: "urgentlyMissing",
   },
   {
+    id: "5",
     name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
@@ -40,6 +45,7 @@ export const data = [
     status: "approved",
   },
   {
+    id: "6",
     name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
@@ -48,6 +54,7 @@ export const data = [
     status: "urgentlyMissing",
   },
   {
+    id: "7",
     name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
@@ -56,6 +63,7 @@ export const data = [
     status: "urgentlyMissing",
   },
   {
+    id: "8",
     name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
@@ -64,6 +72,7 @@ export const data = [
     status: "urgentlyMissing",
   },
   {
+    id: "9",
     name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
@@ -72,6 +81,7 @@ export const data = [
     status: "approved",
   },
   {
+    id: "10",
     name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
@@ -80,6 +90,7 @@ export const data = [
     status: "urgentlyMissing",
   },
   {
+    id: "11",
     name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
@@ -88,6 +99,7 @@ export const data = [
     status: "approved",
   },
   {
+    id: "12",
     name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
@@ -96,6 +108,7 @@ export const data = [
     status: "urgentlyMissing",
   },
   {
+    id: "13",
     name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
@@ -104,6 +117,7 @@ export const data = [
     status: "missing",
   },
   {
+    id: "14",
     name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
@@ -112,6 +126,7 @@ export const data = [
     status: "approved",
   },
   {
+    id: "15",
     name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
@@ -120,6 +135,7 @@ export const data = [
     status: "approved",
   },
   {
+    id: "16",
     name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
@@ -128,6 +144,7 @@ export const data = [
     status: "missing",
   },
   {
+    id: "17",
     name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
@@ -136,6 +153,7 @@ export const data = [
     status: "urgentlyMissing",
   },
   {
+    id: "18",
     name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,

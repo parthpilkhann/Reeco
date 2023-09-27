@@ -1,21 +1,8 @@
-import { Table, Badge } from "@mantine/core";
+import { Table } from "@mantine/core";
 import { data } from "./utils";
+import StatusComp from "./StatusComp";
 
 export function ProductTable() {
-  function getStatusJsx(status: string) {
-    let badge;
-    if (status === "missing") {
-      badge = <Badge color="red">Missing</Badge>;
-    } else if (status === "urgentlyMissing") {
-      badge = <Badge color="rgba(189, 25, 25, 1)">Urgently Missing</Badge>;
-    } else if (status === "approved") {
-      badge = <Badge color="green">Approved</Badge>;
-    } else {
-      badge = <Badge color="green">Approved</Badge>;
-    }
-    return badge;
-  }
-
   const rows = data.map((row) => (
     <Table.Tr key={row.name}>
       <Table.Td>{row.name}</Table.Td>
@@ -23,7 +10,7 @@ export function ProductTable() {
       <Table.Td>{row.price}</Table.Td>
       <Table.Td>{row.quantity}</Table.Td>
       <Table.Td>{row.total}</Table.Td>
-      <Table.Td>{getStatusJsx(row.status)}</Table.Td>
+      <Table.Td>{<StatusComp status={row.status} />}</Table.Td>
     </Table.Tr>
   ));
 
