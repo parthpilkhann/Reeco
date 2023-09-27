@@ -61,7 +61,7 @@ export default function EditModal({
             <Chip value="quantity">Quantity</Chip>
             <Chip value="price">Price</Chip>
             <Chip value="missing">Missing</Chip>
-            <Chip value="other">Missing</Chip>
+            <Chip value="other">Other</Chip>
           </Group>
         </Chip.Group>
         <Group justify="flex-end">
