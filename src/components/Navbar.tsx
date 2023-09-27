@@ -56,8 +56,16 @@ export default function Navbar() {
                 <Text fw={700}>Order 35467ACV</Text>
               </Stack>
               <Group>
-                <Button>Back</Button>
-                <Button>Approve Order</Button>
+                <Button
+                  radius="xl"
+                  color={theme.colors.green[9]}
+                  variant="outline"
+                >
+                  Back
+                </Button>
+                <Button color={theme.colors.green[9]} radius="xl">
+                  Approve Order
+                </Button>
               </Group>
             </Group>
           </Paper>
