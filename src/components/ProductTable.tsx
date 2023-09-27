@@ -10,7 +10,7 @@ export function ProductTable() {
       <Table.Td>{row.price}</Table.Td>
       <Table.Td>{row.quantity}</Table.Td>
       <Table.Td>{row.total}</Table.Td>
-      <Table.Td>{<StatusComp status={row.status} />}</Table.Td>
+      <Table.Td>{<StatusComp status={row.status} name={row.name} />}</Table.Td>
     </Table.Tr>
   ));
 
