@@ -1,9 +1,12 @@
 import { Table } from "@mantine/core";
-import { data } from "./utils";
 import StatusComp from "./StatusComp";
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
 
 export function ProductTable() {
-  const rows = data.map((row) => (
+  const productData = useSelector((state: RootState) => state.data.items);
+  
+  const rows = productData.map((row) => (
     <Table.Tr key={row.name}>
       <Table.Td>{row.name}</Table.Td>
       <Table.Td>{row.brand}</Table.Td>

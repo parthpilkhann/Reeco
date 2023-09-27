@@ -10,9 +10,8 @@ import {
 } from "@mantine/core";
 import { IconCheck, IconSquareRoundedLetterX } from "@tabler/icons-react";
 import { useDisclosure } from "@mantine/hooks";
-import { useSelector } from "react-redux";
 import { getStatusJsx } from "./utils";
-import { RootState } from "../redux/store";
+
 
 export default function StatusComp({
   status,
@@ -23,7 +22,6 @@ export default function StatusComp({
 }) {
   const [opened, { open, close }] = useDisclosure(false);
   const theme = useMantineTheme();
-  const data = useSelector((state: RootState) => state.data.items);
 
   return (
     <Group justify="space-between">
