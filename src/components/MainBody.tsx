@@ -1,6 +1,6 @@
 import { AppShell, Group, Text, Paper, Divider, rem } from "@mantine/core";
 
-export default function Header() {
+export default function MainBody() {
   return (
     <AppShell.Main px={0} pt={`calc(${rem(120)} + var(--mantine-spacing-md))`}>
       <Paper>
