@@ -10,7 +10,7 @@ export function ProductTable() {
     <Table.Tr key={row.id}>
       <Table.Td>
         <Group wrap="nowrap">
-          <Image h="xl" w="xl" src="public\Avocado Hass.jpg" />
+          <Image h="xl" w="xl" src="/Avocado Hass.jpg" />
           {row.name}
         </Group>
       </Table.Td>

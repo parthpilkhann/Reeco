@@ -24,15 +24,23 @@ export default function StatusComp({
   price,
   reason,
 }: StatusCompProps) {
-  const [opened, { open, close }] = useDisclosure(false);
   const theme = useMantineTheme();
   const dispatch = useDispatch();
+  // Note: we could have just de-structured the stuff out of useDiclosure but since we are using 2 different useDiclosure hooks hence we had to name them.
+  const edit = useDisclosure(false);
+  const openedEdit = edit[0];
+  const openEdit = edit[1].open;
+  const closeEdit = edit[1].close;
+
+  const product = useDisclosure(false);
+  const openedProduct = product[0];
+  const openProduct = product[1].open;
+  const closeProduct = product[1].close;
 
   function handleCheckClick() {
     if (status !== "approved") {
       dispatch(changeStatus({ id, newStatus: "approved" }));
     }
-    close();
   }
 
   return (
@@ -42,14 +50,14 @@ export default function StatusComp({
         <ActionIcon variant="transparent" onClick={handleCheckClick}>
           <IconCheck />
         </ActionIcon>
-        <ActionIcon variant="transparent" onClick={open}>
+        <ActionIcon variant="transparent" onClick={openProduct}>
           <IconSquareRoundedLetterX />
         </ActionIcon>
         <Button
           radius="xl"
           color={theme.colors.green[9]}
           variant="filled"
-          onClick={open}
+          onClick={openEdit}
         >
           Edit
         </Button>
@@ -58,17 +66,17 @@ export default function StatusComp({
         status={status}
         name={name}
         id={id}
-        open={open}
-        opened={opened}
-        close={close}
+        open={openProduct}
+        opened={openedProduct}
+        close={closeProduct}
       />
       <EditModal
         status={status}
         name={name}
         id={id}
-        open={open}
-        opened={opened}
-        close={close}
+        open={openEdit}
+        opened={openedEdit}
+        close={closeEdit}
         quantity={quantity}
         price={price}
         reason={reason}

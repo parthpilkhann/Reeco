@@ -57,7 +57,7 @@ export default function EditModal({
         <Title order={4}>Missing Product?</Title>
         <Text>is {name} product really missing?</Text>
         <Group justify="space-between" wrap="nowrap">
-          <Image h={100} w={100} src="public\Avocado Hass.jpg" />
+          <Image h={100} w={100} src="/Avocado Hass.jpg" />
           <Stack w="40%">
             <Group wrap="nowrap">
               <Text>Price</Text>
