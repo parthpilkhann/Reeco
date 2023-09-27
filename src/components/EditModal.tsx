@@ -11,9 +11,8 @@ import {
   useMantineTheme,
 } from "@mantine/core";
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { changeState } from "../redux/dataSlice";
-import { RootState } from "../redux/store";
 
 interface ProductModalProps {
   status: string;
@@ -41,7 +40,6 @@ export default function EditModal({
   const [newPrice, setNewPrice] = useState(price);
   const [newQuantity, setNewQuantity] = useState(quantity);
   const [newReason, setNewReason] = useState(reason);
-  // const productData = useSelector((state: RootState) => state.data.items);
 
   const newStates = {
     newPrice,
@@ -53,8 +51,6 @@ export default function EditModal({
     dispatch(changeState({ id, newStates }));
     close();
   }
-  // console.log(productData);
-
   return (
     <Modal opened={opened} onClose={close}>
       <Stack>
