@@ -19,6 +19,7 @@ interface ProductModalProps {
   price: number;
   quantity: number;
   opened: boolean;
+  reason: string;
   open?: () => void;
   close: () => void;
 }
@@ -29,10 +30,12 @@ export default function EditModal({
   price,
   quantity,
   close,
+  reason,
 }: ProductModalProps) {
   const theme = useMantineTheme();
   const [newPrice, setNewPrice] = useState(price);
   const [newQuantity, setNewQuantity] = useState(quantity);
+  const [newReason, setNewReason] = useState(reason);
 
   return (
     <Modal opened={opened} onClose={close}>
@@ -69,7 +72,11 @@ export default function EditModal({
           </Stack>
         </Group>
         <Text fw={600}>Choose Reason</Text>
-        <Chip.Group>
+        <Chip.Group
+          multiple={false}
+          value={newReason}
+          onChange={(e) => setNewReason(e)}
+        >
           <Group justify="center">
             <Chip value="quantity">Quantity</Chip>
             <Chip value="price">Price</Chip>

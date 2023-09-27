@@ -13,6 +13,7 @@ interface StatusCompProps {
   id: string;
   quantity: number;
   price: number;
+  reason: string;
 }
 
 export default function StatusComp({
@@ -21,6 +22,7 @@ export default function StatusComp({
   id,
   quantity,
   price,
+  reason,
 }: StatusCompProps) {
   const [opened, { open, close }] = useDisclosure(false);
   const theme = useMantineTheme();
@@ -69,6 +71,7 @@ export default function StatusComp({
         close={close}
         quantity={quantity}
         price={price}
+        reason={reason}
       />
     </Group>
   );
