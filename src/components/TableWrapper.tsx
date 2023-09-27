@@ -28,9 +28,13 @@ export default function TableWrapper() {
   }, [dispatch, resData]);
 
   function handleAddItem() {
-    //TODO: add logic for adding product, (add reducer)
+    // TODO: add logic for adding product, (add reducer)
   }
 
+  function handleSearch() {
+    // TODO: add logic for searching
+  }
+  
   return (
     <Paper shadow="md" p="md">
       <Stack>
@@ -40,6 +44,7 @@ export default function TableWrapper() {
             size="md"
             placeholder="Search questions"
             rightSectionWidth={42}
+            onClick={handleSearch}
             leftSection={
               <IconSearch
                 style={{ width: rem(18), height: rem(18) }}
