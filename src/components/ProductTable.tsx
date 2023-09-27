@@ -19,7 +19,16 @@ export function ProductTable() {
       <Table.Td>{row.quantity}</Table.Td>
       <Table.Td>{row.total}</Table.Td>
       <Table.Td>
-        {<StatusComp status={row.status} name={row.name} id={row.id} />}
+        {
+          <StatusComp
+            status={row.status}
+            name={row.name}
+            id={row.id}
+            quantity={row.quantity}
+            price={row.price}
+            total={row.total}
+          />
+        }
       </Table.Td>
     </Table.Tr>
   ));

@@ -7,6 +7,7 @@ import {
   Image,
   Chip,
   Button,
+  NumberInput,
   useMantineTheme,
 } from "@mantine/core";
 
@@ -14,13 +15,24 @@ interface ProductModalProps {
   status: string;
   name: string;
   id: string;
+  price: number;
+  quantity: number;
+  total: number;
   opened: boolean;
   open?: () => void;
   close: () => void;
 }
 
-export default function EditModal({ name, opened, close }: ProductModalProps) {
+export default function EditModal({
+  name,
+  opened,
+  price,
+  quantity,
+  total,
+  close,
+}: ProductModalProps) {
   const theme = useMantineTheme();
+
   return (
     <Modal opened={opened} onClose={close}>
       <Stack>
@@ -29,33 +41,34 @@ export default function EditModal({ name, opened, close }: ProductModalProps) {
         <Group justify="space-between" wrap="nowrap">
           <Image h={100} w={100} src="public\Avocado Hass.jpg" />
           <Stack w="40%">
-            <Group>
+            <Group wrap="nowrap">
               <Text>Price</Text>
-              <Text>9900</Text>
+              <NumberInput allowNegative={false} defaultValue={price} />
             </Group>
-            <Group>
-              <Text>Price</Text>
-              <Text>9900</Text>
+            <Group wrap="nowrap">
+              <Text>Quantity</Text>
+              <NumberInput allowNegative={false} defaultValue={quantity} />
             </Group>
-            <Group>
-              <Text>Price</Text>
-              <Text>9900</Text>
+            <Group wrap="nowrap">
+              <Text>Total</Text>
+              <NumberInput allowNegative={false} defaultValue={total} />
             </Group>
           </Stack>
         </Group>
         <Text fw={600}>Choose Reason </Text>
         <Chip.Group>
           <Group justify="center">
-            <Chip value="1">Single chip</Chip>
-            <Chip value="2">Can be selected</Chip>
-            <Chip value="3">At a time</Chip>
+            <Chip value="quantity">Quantity</Chip>
+            <Chip value="price">Price</Chip>
+            <Chip value="missing">Missing</Chip>
+            <Chip value="other">Missing</Chip>
           </Group>
         </Chip.Group>
         <Group justify="flex-end">
           <Button radius="xl" color={theme.colors.green[9]} variant="outline">
             Cancel
           </Button>
-          <Button radius="xl" color={theme.colors.green[9]} variant="outline">
+          <Button color={theme.colors.green[9]} radius="xl">
             Send
           </Button>
         </Group>

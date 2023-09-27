@@ -7,15 +7,23 @@ import { changeStatus } from "../redux/dataSlice";
 import ProductModal from "./ProductModal";
 import EditModal from "./EditModal";
 
+interface StatusCompProps {
+  status: string;
+  name: string;
+  id: string;
+  quantity: number;
+  price: number;
+  total: number;
+}
+
 export default function StatusComp({
   status,
   name,
   id,
-}: {
-  status: string;
-  name: string;
-  id: string;
-}) {
+  quantity,
+  price,
+  total,
+}: StatusCompProps) {
   const [opened, { open, close }] = useDisclosure(false);
   const theme = useMantineTheme();
   const dispatch = useDispatch();
@@ -61,6 +69,9 @@ export default function StatusComp({
         open={open}
         opened={opened}
         close={close}
+        quantity={quantity}
+        price={price}
+        total={total}
       />
     </Group>
   );
