@@ -7,7 +7,6 @@ import {
   Stack,
   useMantineTheme,
 } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
 import { useDispatch } from "react-redux";
 import { changeStatus } from "../redux/dataSlice";
 
