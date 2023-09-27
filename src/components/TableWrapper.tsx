@@ -11,9 +11,10 @@ import {
 import { IconSearch, IconArrowRight, IconPrinter } from "@tabler/icons-react";
 import { ProductTable } from "./ProductTable";
 import { useEffect, useState } from "react";
-import { ProductDataItem, data } from "./utils";
+import { data } from "./utils";
 import { useDispatch } from "react-redux";
 import { setData } from "../redux/dataSlice";
+import type { ProductDataItem } from "./utils";
 
 export default function TableWrapper() {
   const theme = useMantineTheme();

@@ -41,7 +41,7 @@ export default function EditModal({
   const [newPrice, setNewPrice] = useState(price);
   const [newQuantity, setNewQuantity] = useState(quantity);
   const [newReason, setNewReason] = useState(reason);
-  const productData = useSelector((state: RootState) => state.data.items);
+  // const productData = useSelector((state: RootState) => state.data.items);
 
   const newStates = {
     newPrice,
@@ -53,7 +53,7 @@ export default function EditModal({
     dispatch(changeState({ id, newStates }));
     close();
   }
-  console.log(productData);
+  // console.log(productData);
 
   return (
     <Modal opened={opened} onClose={close}>
