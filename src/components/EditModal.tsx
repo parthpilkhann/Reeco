@@ -10,6 +10,7 @@ import {
   NumberInput,
   useMantineTheme,
 } from "@mantine/core";
+import { useState } from "react";
 
 interface ProductModalProps {
   status: string;
@@ -17,7 +18,6 @@ interface ProductModalProps {
   id: string;
   price: number;
   quantity: number;
-  total: number;
   opened: boolean;
   open?: () => void;
   close: () => void;
@@ -28,10 +28,11 @@ export default function EditModal({
   opened,
   price,
   quantity,
-  total,
   close,
 }: ProductModalProps) {
   const theme = useMantineTheme();
+  const [newPrice, setNewPrice] = useState(price);
+  const [newQuantity, setNewQuantity] = useState(quantity);
 
   return (
     <Modal opened={opened} onClose={close}>
@@ -43,19 +44,31 @@ export default function EditModal({
           <Stack w="40%">
             <Group wrap="nowrap">
               <Text>Price</Text>
-              <NumberInput allowNegative={false} defaultValue={price} />
+              <NumberInput
+                allowNegative={false}
+                onChange={(e) => setNewPrice(e as number)}
+                value={newPrice}
+              />
             </Group>
             <Group wrap="nowrap">
               <Text>Quantity</Text>
-              <NumberInput allowNegative={false} defaultValue={quantity} />
+              <NumberInput
+                allowNegative={false}
+                onChange={(e) => setNewQuantity(e as number)}
+                value={newQuantity}
+              />
             </Group>
             <Group wrap="nowrap">
               <Text>Total</Text>
-              <NumberInput allowNegative={false} defaultValue={total} />
+              <NumberInput
+                allowNegative={false}
+                readOnly
+                value={newQuantity * newPrice}
+              />
             </Group>
           </Stack>
         </Group>
-        <Text fw={600}>Choose Reason </Text>
+        <Text fw={600}>Choose Reason</Text>
         <Chip.Group>
           <Group justify="center">
             <Chip value="quantity">Quantity</Chip>

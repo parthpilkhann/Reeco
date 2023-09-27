@@ -26,7 +26,6 @@ export function ProductTable() {
             id={row.id}
             quantity={row.quantity}
             price={row.price}
-            total={row.total}
           />
         }
       </Table.Td>
