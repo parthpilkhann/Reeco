@@ -1,4 +1,29 @@
-export const data = [
+import { Badge } from "@mantine/core";
+
+export interface ProductDataItem {
+  id: string;
+  name: string;
+  brand: string;
+  price: number;
+  quantity: number;
+  total: number;
+  status: string;
+}
+
+export function getStatusJsx(status: string) {
+  let badge;
+  if (status === "missing") {
+    badge = <Badge color="red">Missing</Badge>;
+  } else if (status === "urgentlyMissing") {
+    badge = <Badge color="rgba(189, 25, 25, 1)">Urgently Missing</Badge>;
+  } else if (status === "approved") {
+    badge = <Badge color="green">Approved</Badge>;
+  } else {
+    badge = <Badge color="green">Approved</Badge>;
+  }
+  return badge;
+}
+export const data: ProductDataItem[] = [
   {
     id: "1",
     name: "Lorem ipsum dolor sit ",

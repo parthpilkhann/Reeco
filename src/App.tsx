@@ -1,8 +1,7 @@
 import "@mantine/core/styles.css";
-import { MantineProvider, Button } from "@mantine/core";
+import { MantineProvider } from "@mantine/core";
 import { theme } from "./theme";
 import { Provider } from "react-redux";
-
 import Body from "./components/Body";
 import store from "./redux/store";
 

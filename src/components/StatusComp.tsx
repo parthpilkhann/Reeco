@@ -11,6 +11,8 @@ import {
 } from "@mantine/core";
 import { IconCheck, IconSquareRoundedLetterX } from "@tabler/icons-react";
 import { useDisclosure } from "@mantine/hooks";
+import { useSelector } from "react-redux";
+import { getStatusJsx } from "./utils";
 
 export default function StatusComp({
   status,
@@ -21,20 +23,7 @@ export default function StatusComp({
 }) {
   const [opened, { open, close }] = useDisclosure(false);
   const theme = useMantineTheme();
-
-  function getStatusJsx(status: string) {
-    let badge;
-    if (status === "missing") {
-      badge = <Badge color="red">Missing</Badge>;
-    } else if (status === "urgentlyMissing") {
-      badge = <Badge color="rgba(189, 25, 25, 1)">Urgently Missing</Badge>;
-    } else if (status === "approved") {
-      badge = <Badge color="green">Approved</Badge>;
-    } else {
-      badge = <Badge color="green">Approved</Badge>;
-    }
-    return badge;
-  }
+  const data = useSelector((state) => state.data.items);
 
   return (
     <Group justify="space-between">

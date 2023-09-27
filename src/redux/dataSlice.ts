@@ -1,5 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { data } from "../components/utils";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { ProductDataItem, data } from "../components/utils";
 
 const dataSlice = createSlice({
   name: "data",
@@ -7,7 +7,7 @@ const dataSlice = createSlice({
     items: data, // Your data goes here
   },
   reducers: {
-    setData: (state, action) => {
+    setData: (state, action: PayloadAction<ProductDataItem[]>) => {
       state.items = action.payload;
     },
   },
