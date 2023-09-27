@@ -1,13 +1,12 @@
 import { Table, Group, Image } from "@mantine/core";
 import StatusComp from "./StatusComp";
-import type { ProductDataItem } from "./utils";
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
 
-export function ProductTable({
-  productData,
-}: {
-  productData: ProductDataItem[];
-}) {
-  const rows = productData?.map((row) => (
+export function ProductTable() {
+  const productData = useSelector((state: RootState) => state.data.items);
+  console.log("pp", productData);
+  const rows = productData.map((row) => (
     <Table.Tr key={row.id}>
       <Table.Td>
         <Group wrap="nowrap">

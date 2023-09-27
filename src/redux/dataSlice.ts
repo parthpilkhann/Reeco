@@ -22,11 +22,10 @@ const dataSlice = createSlice({
       action: PayloadAction<{ id: string; newStatus: string }>
     ) => {
       const { id, newStatus } = action.payload;
-      const itemToUpdate = state.items.find((item) => item.id === id);
-
-      if (itemToUpdate) {
-        itemToUpdate.status = newStatus;
-      }
+      const updatedItems = state.items.map((item) =>
+        item.id === id ? { ...item, status: newStatus } : item
+      );
+      return { ...state, items: updatedItems };
     },
     changeState: (
       state,
@@ -36,19 +35,18 @@ const dataSlice = createSlice({
       }>
     ) => {
       const { id, newStates } = action.payload;
-      console.log("begin", id, newStates);
-      let itemToUpdate = state.items.find((item) => item.id === id);
-      const price = newStates.newPrice;
-      const quantity = newStates.newQuantity;
-      const reason = newStates.newReason;
-      const temp = { price, quantity, reason };
-      if (itemToUpdate) {
-        itemToUpdate = {
-          ...itemToUpdate,
-          ...temp,
-        };
-        console.log("end", itemToUpdate);
-      }
+      const { newPrice, newQuantity, newReason } = newStates;
+      const updatedItems = state.items.map((item) =>
+        item.id === id
+          ? {
+              ...item,
+              price: newPrice,
+              quantity: newQuantity,
+              reason: newReason,
+            }
+          : item
+      );
+      return { ...state, items: updatedItems };
     },
   },
 });

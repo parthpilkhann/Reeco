@@ -12,20 +12,21 @@ import { IconSearch, IconArrowRight, IconPrinter } from "@tabler/icons-react";
 import { ProductTable } from "./ProductTable";
 import { useEffect, useState } from "react";
 import { data } from "./utils";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setData } from "../redux/dataSlice";
 import type { ProductDataItem } from "./utils";
+import { RootState } from "../redux/store";
 
 export default function TableWrapper() {
   const theme = useMantineTheme();
   const dispatch = useDispatch();
-  const [productData, setProductData] = useState<ProductDataItem[]>([]);
+  const [resData, setResData] = useState<ProductDataItem[]>([]);
 
   useEffect(() => {
     // make an api call and set the data in this state.
-    setProductData(data);
-    dispatch(setData(productData));
-  }, [dispatch, productData]);
+    setResData(data);
+    dispatch(setData(resData));
+  }, [dispatch, resData]);
 
   return (
     <Paper shadow="md" p="md">
@@ -63,7 +64,7 @@ export default function TableWrapper() {
             <IconPrinter />
           </Group>
         </Group>
-        <ProductTable productData={productData} />
+        <ProductTable />
       </Stack>
     </Paper>
   );
