@@ -1,14 +1,4 @@
-import {
-  Group,
-  Button,
-  Modal,
-  Title,
-  Text,
-  Stack,
-  useMantineTheme,
-} from "@mantine/core";
-import { useDispatch } from "react-redux";
-import { changeStatus } from "../redux/dataSlice";
+import { Modal, Title, Text, Stack } from "@mantine/core";
 
 interface ProductModalProps {
   status: string;
@@ -19,16 +9,7 @@ interface ProductModalProps {
   close: () => void;
 }
 
-export default function EditModal({
-  status,
-  name,
-  id,
-  opened,
-  close,
-}: ProductModalProps) {
-  const theme = useMantineTheme();
-  const dispatch = useDispatch();
-
+export default function EditModal({ name, opened, close }: ProductModalProps) {
   return (
     <Modal opened={opened} onClose={close}>
       <Stack>
