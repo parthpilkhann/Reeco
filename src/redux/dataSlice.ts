@@ -13,9 +13,6 @@ const dataSlice = createSlice({
   name: "data",
   initialState,
   reducers: {
-    setData: (state, action: PayloadAction<ProductDataItem[]>) => {
-      state.items = action.payload;
-    },
     changeStatus: (
       state,
       action: PayloadAction<{ id: string; newStatus: string }>
@@ -30,5 +27,5 @@ const dataSlice = createSlice({
   },
 });
 
-export const { setData, changeStatus } = dataSlice.actions;
+export const { changeStatus } = dataSlice.actions;
 export default dataSlice.reducer;
