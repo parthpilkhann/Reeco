@@ -5,15 +5,17 @@ import { RootState } from "../redux/store";
 
 export function ProductTable() {
   const productData = useSelector((state: RootState) => state.data.items);
-  
+
   const rows = productData.map((row) => (
-    <Table.Tr key={row.name}>
+    <Table.Tr key={row.id}>
       <Table.Td>{row.name}</Table.Td>
       <Table.Td>{row.brand}</Table.Td>
       <Table.Td>{row.price}</Table.Td>
       <Table.Td>{row.quantity}</Table.Td>
       <Table.Td>{row.total}</Table.Td>
-      <Table.Td>{<StatusComp status={row.status} name={row.name} />}</Table.Td>
+      <Table.Td>
+        {<StatusComp status={row.status} name={row.name} id={row.id} />}
+      </Table.Td>
     </Table.Tr>
   ));
 
