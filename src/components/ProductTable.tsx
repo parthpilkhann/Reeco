@@ -1,4 +1,4 @@
-import { Table } from "@mantine/core";
+import { Table, Group, Image } from "@mantine/core";
 import StatusComp from "./StatusComp";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
@@ -8,7 +8,12 @@ export function ProductTable() {
 
   const rows = productData.map((row) => (
     <Table.Tr key={row.id}>
-      <Table.Td>{row.name}</Table.Td>
+      <Table.Td>
+        <Group wrap="nowrap">
+          <Image h="xl" w="xl" src="public\Avocado Hass.jpg" />
+          {row.name}
+        </Group>
+      </Table.Td>
       <Table.Td>{row.brand}</Table.Td>
       <Table.Td>{row.price}</Table.Td>
       <Table.Td>{row.quantity}</Table.Td>

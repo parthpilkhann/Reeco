@@ -27,9 +27,9 @@ export default function StatusComp({
   }
 
   return (
-    <Group justify="space-between">
+    <Group justify="space-between" wrap="nowrap">
       {getStatusJsx(status)}
-      <Group>
+      <Group wrap="nowrap">
         <ActionIcon variant="transparent" onClick={handleCheckClick}>
           <IconCheck />
         </ActionIcon>
