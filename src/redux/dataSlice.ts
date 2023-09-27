@@ -13,6 +13,7 @@ const dataSlice = createSlice({
   name: "data",
   initialState,
   reducers: {
+    // TODO: merge both reducers and make it one 
     changeStatus: (
       state,
       action: PayloadAction<{ id: string; newStatus: string }>
@@ -32,7 +33,6 @@ const dataSlice = createSlice({
       }>
     ) => {
       const { id, newStates } = action.payload;
-      console.log("begin", id, newStates);
       let itemToUpdate = state.items.find((item) => item.id === id);
       const price = newStates.newPrice;
       const quantity = newStates.newQuantity;
@@ -44,7 +44,6 @@ const dataSlice = createSlice({
           ...temp,
         };
       }
-      console.log("end", itemToUpdate);
     },
   },
 });
