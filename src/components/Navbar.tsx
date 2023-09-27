@@ -7,12 +7,15 @@ import {
   rem,
   Paper,
   Stack,
+  useMantineTheme,
 } from "@mantine/core";
 import { useHeadroom } from "@mantine/hooks";
 import { IconShoppingCart } from "@tabler/icons-react";
 
 export default function Navbar() {
   const pinned = useHeadroom({ fixedAt: 120 });
+  const theme = useMantineTheme();
+  console.log(theme);
 
   return (
     <>
@@ -20,7 +23,7 @@ export default function Navbar() {
         header={{ height: 50, collapsed: !pinned, offset: false }}
         padding="md"
       >
-        <AppShell.Header style={{ backgroundColor: "green" }}>
+        <AppShell.Header style={{ backgroundColor: theme.colors.green[9] }}>
           <Group justify="space-between" px="xl" h="100%">
             <Group gap="md">
               <Title order={2} style={{ color: "rgba(255, 255, 255, 1)" }}>

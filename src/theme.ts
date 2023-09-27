@@ -1,19 +1,18 @@
 import { createTheme, rem } from "@mantine/core";
 
 export const theme = createTheme({
-  primaryColor: "ocean-blue",
   colors: {
-    "ocean-blue": [
-      "#7AD1DD",
-      "#5FCCDB",
-      "#44CADC",
-      "#2AC9DE",
-      "#1AC2D9",
-      "#11B7CD",
-      "#09ADC3",
-      "#0E99AC",
-      "#128797",
-      "#147885",
+    green: [
+      "#EBFBEE",
+      "#D3F9D8",
+      "#B2F2BB",
+      "#8CE99A",
+      "#69DB7C",
+      "#51CF66",
+      "#40C057",
+      "#37B24D",
+      "#2F9E44",
+      "#2B8A3E",
     ],
   },
 
