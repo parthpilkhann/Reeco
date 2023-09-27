@@ -103,7 +103,12 @@ export default function EditModal({
           </Group>
         </Chip.Group>
         <Group justify="flex-end">
-          <Button radius="xl" color={theme.colors.green[9]} variant="outline">
+          <Button
+            radius="xl"
+            color={theme.colors.green[9]}
+            variant="outline"
+            onClick={close}
+          >
             Cancel
           </Button>
           <Button

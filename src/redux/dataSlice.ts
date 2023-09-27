@@ -1,19 +1,22 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { ProductDataItem, data } from "../components/utils";
+import { ProductDataItem } from "../components/utils";
 
 interface ProductDataItemState {
   items: ProductDataItem[];
 }
 
 const initialState: ProductDataItemState = {
-  items: data,
+  items: [],
 };
 
 const dataSlice = createSlice({
   name: "data",
   initialState,
   reducers: {
-    // TODO: merge both reducers and make it one 
+    setData: (state, action: PayloadAction<ProductDataItem[]>) => {
+      state.items = action.payload;
+    },
+    // TODO: merge both reducers and make it one
     changeStatus: (
       state,
       action: PayloadAction<{ id: string; newStatus: string }>
@@ -48,5 +51,5 @@ const dataSlice = createSlice({
   },
 });
 
-export const { changeStatus, changeState } = dataSlice.actions;
+export const { changeStatus, changeState, setData } = dataSlice.actions;
 export default dataSlice.reducer;

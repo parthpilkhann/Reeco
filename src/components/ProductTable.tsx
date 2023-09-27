@@ -5,13 +5,11 @@ import { RootState } from "../redux/store";
 import { useState, useEffect } from "react";
 import { ProductDataItem } from "./utils";
 
-export function ProductTable() {
-  const data = useSelector((state: RootState) => state.data.items);
-  const [productData, setProductData] = useState<ProductDataItem[]>([]);
-
-  useEffect(() => {
-    setProductData(data);
-  }, [data]);
+export function ProductTable({
+  productData,
+}: {
+  productData: ProductDataItem[];
+}) {
 
   const rows = productData?.map((row) => (
     <Table.Tr key={row.id}>
