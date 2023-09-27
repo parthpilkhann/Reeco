@@ -1,9 +1,7 @@
 import {
-  AppShell,
   Group,
   Text,
   Button,
-  rem,
   Paper,
   Stack,
   useMantineTheme,
@@ -12,8 +10,7 @@ import {
 export default function OrderCard() {
   const theme = useMantineTheme();
   return (
-    <AppShell.Main px={0} pt={`calc(${rem(36)} + var(--mantine-spacing-md))`}>
-      <Paper shadow="lg" py="md">
+      <Paper shadow="lg">
         <Group px="xl" justify="space-between">
           <Stack>
             <Text>Orders &#62; Order 35467ACV</Text>
@@ -29,6 +26,5 @@ export default function OrderCard() {
           </Group>
         </Group>
       </Paper>
-    </AppShell.Main>
   );
 }
