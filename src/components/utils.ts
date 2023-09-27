@@ -1,6 +1,6 @@
 export const data = [
   {
-    name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, officia!",
+    name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
     quantity: 23,
@@ -8,7 +8,7 @@ export const data = [
     status: "approved",
   },
   {
-    name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, officia!",
+    name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
     quantity: 23,
@@ -16,7 +16,7 @@ export const data = [
     status: "missing",
   },
   {
-    name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, officia!",
+    name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
     quantity: 23,
@@ -24,7 +24,7 @@ export const data = [
     status: "missingUrgently",
   },
   {
-    name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, officia!",
+    name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
     quantity: 23,
@@ -32,7 +32,7 @@ export const data = [
     status: "approved",
   },
   {
-    name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, officia!",
+    name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
     quantity: 23,
@@ -40,7 +40,7 @@ export const data = [
     status: "missing",
   },
   {
-    name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, officia!",
+    name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
     quantity: 23,
@@ -48,7 +48,7 @@ export const data = [
     status: "missing",
   },
   {
-    name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, officia!",
+    name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
     quantity: 23,
@@ -56,7 +56,7 @@ export const data = [
     status: "approved",
   },
   {
-    name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, officia!",
+    name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
     quantity: 23,
@@ -64,7 +64,7 @@ export const data = [
     status: "missingUrgently",
   },
   {
-    name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, officia!",
+    name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
     quantity: 23,
@@ -72,7 +72,7 @@ export const data = [
     status: "approved",
   },
   {
-    name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, officia!",
+    name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
     quantity: 23,
@@ -80,7 +80,7 @@ export const data = [
     status: "missing",
   },
   {
-    name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, officia!",
+    name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
     quantity: 23,
@@ -88,7 +88,7 @@ export const data = [
     status: "approved",
   },
   {
-    name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, officia!",
+    name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
     quantity: 23,
@@ -96,7 +96,7 @@ export const data = [
     status: "missingUrgently",
   },
   {
-    name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, officia!",
+    name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
     quantity: 23,
@@ -104,7 +104,7 @@ export const data = [
     status: "missing",
   },
   {
-    name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, officia!",
+    name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
     quantity: 23,
@@ -112,7 +112,7 @@ export const data = [
     status: "approved",
   },
   {
-    name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, officia!",
+    name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
     quantity: 23,
@@ -120,7 +120,7 @@ export const data = [
     status: "approved",
   },
   {
-    name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, officia!",
+    name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
     quantity: 23,
@@ -128,7 +128,7 @@ export const data = [
     status: "missing",
   },
   {
-    name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, officia!",
+    name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
     quantity: 23,
@@ -136,7 +136,7 @@ export const data = [
     status: "missingUrgently",
   },
   {
-    name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, officia!",
+    name: "Lorem ipsum dolor sit ",
     brand: "amet consectetur adi",
     price: 40,
     quantity: 23,
